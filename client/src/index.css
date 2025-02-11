@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 13%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 0 100% 50%;
+  }
+
+  body {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+
+  .font-press-start-2p {
+    font-family: 'Press Start 2P', cursive !important;
+  }
+}
+
+.cyber-gradient {
+  background: linear-gradient(180deg, rgba(255,0,0,0.1) 0%, transparent 100%);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.shadow-pixel {
+  box-shadow: 
+    2px 2px 0 0 hsl(var(--primary)),
+    4px 4px 0 0 hsl(var(--muted));
+  border: 2px solid hsl(var(--border));
+  transition: all 0.2s ease;
+}
+
+.shadow-pixel:hover {
+  box-shadow: 
+    1px 1px 0 0 hsl(var(--primary)),
+    2px 2px 0 0 hsl(var(--muted));
+  transform: translate(1px, 1px);
+}
+
+.card-hover-effect {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 20px rgba(255,0,0,0.2),
+    0 0 40px rgba(255,0,0,0.1);
+}
+
+.text-container {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
